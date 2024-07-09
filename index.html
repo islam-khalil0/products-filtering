@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Filtering</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="filters">
+          <h2>Filter Options</h2>
+          <div class="filter-category">
+            <label for="category">Category :</label>
+            <select id="category">
+              <option value="">All</option>
+            </select>
+          </div>
+          <div class="filter-price">
+            <label for="price-min">Price Range :</label>
+            <br />
+            <input
+              style="margin-top: 0.3rem"
+              type="number"
+              id="price-min"
+              placeholder="Min Price"
+            />
+            <input type="number" id="price-max" placeholder="Max Price" />
+          </div>
+          <div class="filter-brand">
+            <label for="brand">Brand :</label>
+            <select id="brand">
+              <option value="">All</option>
+            </select>
+          </div>
+          <button id="clear-filters">Clear Filters</button>
+        </div>
+        <div class="sort-options">
+          <label for="sort">Sort By :</label>
+          <select id="sort">
+            <option value="default">Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+            <option value="name-desc">Name: Z to A</option>
+          </select>
+        </div>
+      </aside>
+
+      <section>
+        <h1>All of products</h1>
+        <div class="product-list"></div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
